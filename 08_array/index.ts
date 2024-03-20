@@ -1,21 +1,43 @@
-// how to use type annotation in array
+// way yo define array in typescript.
 
-// 01 : Way One
-const avengers: string[] = ["Thor", "Captain America", "Hulk"];
+// string array
+const greeting: string[] = ["hello", "hy", "how are you"];
 
-// 02 : Way Two
-const new_avengers: string[] = new Array("Thor", "Captain America", "Hulk");
+// number array
+const marks: number[] = [20, 40, 65];
 
-// types of array annotation on typescript
+// boolean array
+const isPassed: boolean[] = [true, false, true];
 
-// string type
-const str_array: string[] = ["hello", "hi", "how are you"];
+// add object into array
 
-// number type
-const num_array: number[] = [22, 33, 45.45, -29];
+type userInfoProps = {
+    name: string;
+    email: string;
+};
 
-// boolean type
-const boo_array: boolean[] = [true, false, true];
+const userInfo: userInfoProps[] = [];
 
-// mix type
-const mix_array: (string | number | boolean)[] = ["John", 18, true];
+userInfo.push({
+    name: "john",
+    email: "john@gmail.com",
+});
+
+// how to add array into array
+
+const favMovies: string[][] = [
+    ["lala land", "cars 3"],
+    ["avatar", "avengers"],
+    ["interstellar", "titanic"],
+];
+
+console.log(favMovies[0][1]);
+
+// remember ----------------------- //
+
+const favHeros: string[] = [];
+
+favHeros.push("bat man");
+// if you wan't push any value in array first define it's inset to array in my case it's a [string[]] because by default array has [any[]] inset and any it's not good practice.
+
+export {};
