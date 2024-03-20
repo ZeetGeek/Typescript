@@ -31,3 +31,24 @@ const studentInfo: Array<{ id: number; name: string; favMovies: string[] }> = [
 ];
 
 console.log(studentInfo);
+
+// void and never return
+
+// void mens a function return nothing.
+
+const myFavHero = (hero: string): void => {
+    // if you can't return any thing on function then please define [ void ]
+    console.log(`hy there... my favorite hero is ${hero}`);
+};
+
+myFavHero("Bat Man");
+
+// never mens a function never return a value.
+
+const consoleErr = (msg: string): never => {
+    // if the function never return a value then please define [ never ]
+    // for handling errors we use never instead
+    throw new Error(msg);
+};
+
+consoleErr("something went wrong");
